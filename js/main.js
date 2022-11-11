@@ -6,7 +6,7 @@ elForm.addEventListener("submit", (evt) => {
     evt.preventDefault()
     let elInputSearch = document.querySelector(".input__search").value;
     
-    fetch(`${dictionaryApi}${elInputSearch}`)
+    fetch(`${dictionaryApi}/${elInputSearch}`)
     .then(response => response.json())
     .then(data => {
         elListWrapper.innerHTML = `
@@ -30,8 +30,7 @@ elForm.addEventListener("submit", (evt) => {
         play.addEventListener("click", (evt) => {
             evt.preventDefault()
 
-            let Islomjon = "Islomjo n"
-            console.log(Islomjon);
+            
         })
     })
 })
